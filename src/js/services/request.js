@@ -1,13 +1,12 @@
-SpielApp.service('SpielForm', getFormService) {
-  function getFormService($http) {
+var app = angular.module('spielapp')
+.service(favorites, getFavService) {
+  function getFavService($http) {
     function fetchForm() {
     return $http({
       method: 'GET',
-      url: ''
-    }).then(function(response) {
-      console.log(repsonse);
+      url: './src/data.json'
     });
-  };
+  }
   return {
     get: fetchForm
   };

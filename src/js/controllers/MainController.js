@@ -34,7 +34,7 @@ $scope.libMaker= function(response) {
      for (var i = 0; i < this.splitUp.length; i++) {
        switch(this.splitUp[i]) {
          case "1":
-         this.splitUp[i] = "<p contenteditable='true' class='inputs'>NOUN</p>";
+         this.splitUp[i] = "<p contenteditable='true'  class='inputs'>NOUN</p>";
          break;
          case "2":
          this.splitUp[i] = "<p contenteditable='true' class='inputs'>VERB</p>";
