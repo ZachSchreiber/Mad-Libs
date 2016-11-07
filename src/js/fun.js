@@ -2,14 +2,11 @@ $('body').on('click', '.newSpiel',  function () {
   $('#intro').hide();
 });
 
-// $("body").on('click', '.gimme', function () {
-// });
 
 var spielMe = null;
-
 $("body").on('click', '.heart', function () {
    spielMe = $('#gameForm').html();
-  console.log(spielMe);
+  removecarrots(spielMe);
 });
 
 
@@ -17,7 +14,6 @@ $('body').on('click', '.inputs', function() {
   var val = $(this).text();
   $(this).text('');
   $(this).toggleClass('focus');
-  console.log(val);
 
 });
 
@@ -55,4 +51,10 @@ function signUpValues() {
         alert("Passwords do not match");
     }
 
+}
+
+function removecarrots(form) {
+  var newform = ''
+  newForm = form.replace(/<.*?>/g, "");
+  console.log(newForm);
 }
