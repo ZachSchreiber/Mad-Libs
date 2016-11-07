@@ -15,7 +15,7 @@ $("body").on('click', '.heart', function () {
 
 $('body').on('click', '.inputs', function() {
   $(this).text('');
-  $(this).toggleClass('acitve');
+  $(this).toggleClass('active');
 });
 
 
