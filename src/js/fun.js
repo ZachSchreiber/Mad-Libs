@@ -2,14 +2,11 @@ $('body').on('click', '.newSpiel',  function () {
   $('#intro').hide();
 });
 
-// $("body").on('click', '.gimme', function () {
-// });
 
 var spielMe = null;
-
 $("body").on('click', '.heart', function () {
    spielMe = $('#gameForm').html();
-  console.log(spielMe);
+  removecarrots(spielMe);
 });
 
 
@@ -18,8 +15,11 @@ $('body').on('click', '.inputs', function() {
   $(this).text('');
   $(this).toggleClass('active');
   $(this).toggleClass('focus');
+<<<<<<< HEAD
 
   console.log(val);
+=======
+>>>>>>> aa86a47256e7c4da4def870d03e6f0aafd004f0b
 
 
 });
@@ -58,4 +58,10 @@ function signUpValues() {
         alert("Passwords do not match");
     }
 
+}
+
+function removecarrots(form) {
+  var newform = ''
+  newForm = form.replace(/<.*?>/g, "");
+  console.log(newForm);
 }

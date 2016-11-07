@@ -16,12 +16,11 @@ app.controller('FavController', function($scope, favorites, $q) {
 
 
 
-  this.allFavs = '';
+  $scope.allFavs = null;
 
 
      $q.when(favorites.get()).then(function(response) {
-       this.allFavs = response;
-       console.log(this.allFavs);
+       $scope.allFavs = response.data;
      });
 
 
