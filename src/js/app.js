@@ -2,7 +2,7 @@
  angular.module('spielapp', ['ui.router', 'LocalStorageModule'])
 
 .config(function ($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('./src/templates/login.html');
+  $urlRouterProvider.otherwise('/index.htm');
 
   $stateProvider.state('main', {
     url: '/',

@@ -1,31 +1,36 @@
 var app = angular.module('spielapp')
-app.controller('MainController', function($scope, $sce) {
-
+app.controller('MainController', function($scope, $sce, $http) {
 
 
   	$scope.isActive = false;
     $scope.activeForm = function() {
       $scope.isActive = !$scope.isActive;
+      
     };
 
-    // $scope.when(spielForm.get()).then(function(response) {
-    //       spielForm.formString = response.data;
-    //     });
+
+var url = "https://quiet-mountain-66346.herokuapp.com/api/home";
+
+$scope.getSpiels = function(){
+    $http.get(url).success(function(response) {
+     $scope.libMaker(response.content);
+    $scope.isActive = false;
 
 
 
+});
+}
 
-    $scope.numString = "Captain: Ohhhhh... who lives in a 1 under the 1 ? Kids: 1 Bob Squarepants! Captain: 3 and 9 and 3 is he! Kids: 1 Bob Squarepants! Captain: If 3 1 be somthing you 2 ... Kids: 1 Bob Squarepants! Captain: Then 2 on the 1 and 2 like a 5 . Kids: 1  Bob Squarepants! Captain: Ready? Everyone: 1  Bob Squarepants! 1 Bob Squarepants! 1 Bob Squarepants! Captain: 1 Bob... Squarepants! ahhhahhhahahhaha!";
     $scope.body = null;
     $scope.completedSpiel = null;
 
 
-    $scope.textarea={
-  field1:''
-}
+//     $scope.textarea={
+//   field1:''
+// }
 
-$scope.libMaker= function() {
-    this.splitUp = $scope.numString.split(" ");
+$scope.libMaker= function(response) {
+    this.splitUp = response.split("");
      for (var i = 0; i < this.splitUp.length; i++) {
        switch(this.splitUp[i]) {
          case "1":
@@ -58,7 +63,7 @@ $scope.libMaker= function() {
 
        }
      }
-      $scope.body = this.splitUp.join(' ');
+      $scope.body = this.splitUp.join('');
    }
 
         $scope.getHtml = function(html){

@@ -15,8 +15,10 @@ $("body").on('click', '.heart', function () {
 
 $('body').on('click', '.inputs', function() {
   $(this).text('');
-  $(this).toggleClass('acitve');
+  $(this).toggleClass('focus');
+  
 });
+
 
 
 
@@ -36,5 +38,19 @@ $('body').on('click', '#textChange', function () {
         $(this).text('Register');
         $('.register').fadeOut();
     }
-console.log("het");
 });
+
+
+function signUpValues() {
+    var newContext = {
+        username: $('#username').val(),
+        password: $('#password').val(),
+        confirm: $('#confirm').val()
+    };
+    if (newContext.password === newContext.confirm) {
+        checkUsername(newContext);
+    } else {
+        alert("Passwords do not match");
+    }
+
+}
