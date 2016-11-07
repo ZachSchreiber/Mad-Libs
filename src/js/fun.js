@@ -14,9 +14,11 @@ $("body").on('click', '.heart', function () {
 
 
 $('body').on('click', '.inputs', function() {
+  var val = $(this).text();
   $(this).text('');
   $(this).toggleClass('focus');
-  
+  console.log(val);
+
 });
 
 
