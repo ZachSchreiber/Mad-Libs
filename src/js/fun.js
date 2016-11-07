@@ -15,8 +15,14 @@ $("body").on('click', '.heart', function () {
 
 $('body').on('click', '.inputs', function() {
   $(this).text('');
+<<<<<<< HEAD
   $(this).toggleClass('active');
+=======
+  $(this).toggleClass('focus');
+  
+>>>>>>> b6d422187d3989e9e88b13096dec634e13affd2c
 });
+
 
 
 
@@ -36,5 +42,19 @@ $('body').on('click', '#textChange', function () {
         $(this).text('Register');
         $('.register').fadeOut();
     }
-console.log("het");
 });
+
+
+function signUpValues() {
+    var newContext = {
+        username: $('#username').val(),
+        password: $('#password').val(),
+        confirm: $('#confirm').val()
+    };
+    if (newContext.password === newContext.confirm) {
+        checkUsername(newContext);
+    } else {
+        alert("Passwords do not match");
+    }
+
+}

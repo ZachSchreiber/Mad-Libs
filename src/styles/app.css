@@ -1,240 +1,76 @@
-/**
- * Global Resets
- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+/*
+Error: Invalid CSS after "...xt-shadow: none": expected "{", was ";"
+        on line 82 of partials/_game.scss
+        from line 3 of app.scss
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+77:   border-radius: 2px;
+78:   color: #8164BA;
+79:   padding: 6px 15px 0 15px;
+80:   outline: none;
+81: <<<<<<< HEAD
+82:   text-shadow: none;
+83: 
+84:   &:active {
+85:     padding-left: 50px;
+86:     padding-right: 50px;
+87: =======
 
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.formFields {
-  margin: 0 auto;
-  text-align: center; }
-
-.loginPage {
-  margin: 0 auto;
-  width: 70%;
-  text-align: center;
-  padding: 20px; }
-
-.login {
-  background-color: rgba(255, 255, 255, 0.3);
-  border: none;
-  border-radius: 2px;
-  border: 1px solid #8164BA;
-  display: block;
-  font-family: 'Josefin Sans', serif;
-  font-size: 18px;
-  margin: 10px 0;
-  outline-color: #40325d;
-  width: 100%;
-  height: 30px;
-  padding: 5px; }
-  .login.register {
-    display: none;
-    margin: 5px 0px; }
-
-#welcome {
-  font-family: 'Monofett', cursive;
-  color: #ffffff;
-  font-size: 70px;
-  margin: 25px; }
-
-.loginButton {
-  font-family: 'Josefin Sans', serif;
-  font-size: 14px;
-  padding: 10px 15px; }
-
-footer {
-  margin: 10px;
-  font-size: 20px; }
-
-a {
-  color: black;
-  cursor: pointer; }
-
-#gamePage {
-  width: 100%;
-  text-shadow: 0 0 10px #000000;
-  color: transparent; }
-  #gamePage .active {
-    color: #000000;
-    text-shadow: none; }
-
-.mainContainer {
-  width: 70%;
-  margin: 0 auto; }
-
-#gameForm {
-  line-height: 145%; }
-
-.fa-heart {
-  font-size: 8px; }
-
-button {
-  margin-top: 40px;
-  background: #8164BA;
-  border: none;
-  box-shadow: 0 6px #40325d;
-  border-radius: 5px;
-  color: #ffffff;
-  cursor: pointer;
-  outline: none;
-  margin: 5px;
-  font-size: 30px;
-  font-family: 'Monofett', cursive;
-  padding: 5px 10px; }
-  button:hover {
-    background: #5a4682; }
-    button:hover:active {
-      background: #5a4682;
-      box-shadow: 0 3px #40325d;
-      transform: translateY(4px); }
-
-.gameButtons {
-  position: relative;
-  bottom: -50px; }
-
-#title {
-  font-family: 'Monofett', cursive;
-  color: #fff;
-  font-size: 50px;
-  padding-bottom: 20px; }
-
-#intro {
-  color: #000000;
-  text-shadow: none; }
-
-.inputs {
-  display: inline;
-  background-color: rgba(255, 255, 255, 0.3);
-  font-size: 20px;
-  font-family: 'Josefin Sans', serif;
-  border: 0;
-  border-bottom: 2px solid #40325d;
-  border-radius: 2px;
-  color: #8164BA;
-  padding: 6px 4px 0 4px;
-  outline: none;
-  text-shadow: none; }
-  .inputs:active {
-    padding-left: 50px;
-    padding-right: 50px; }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  background: url("../../images/background.png");
-  font-family: 'Josefin Sans', serif; }
-
-.topSection {
-  height: 150px;
-  background: #8164BA;
-  z-index: 100; }
-
-h1 {
-  color: #ffffff;
-  font-size: 100px;
-  font-family: 'Monofett', cursive;
-  text-align: left;
-  padding-top: 5px; }
-
-.logo {
-  padding-top: 15px;
-  float: left;
-  padding-left: 1%; }
-
-ul {
-  background: #40325d;
-  overflow: hidden;
-  position: relative;
-  top: 20px;
-  width: 100%; }
-  ul .nav {
-    display: inline;
-    float: left;
-    text-align: center;
-    width: 33.33vw; }
-
-.nav a {
-  color: #ffffff;
-  display: block;
-  height: 37px;
-  font-size: 18px;
-  padding-top: 10px;
-  text-decoration: none; }
-
-.nav a:hover {
-  background: #33284a;
-  text-transform: uppercase; }
-
-.fadeContainer {
-  background-color: rgba(255, 255, 255, 0.3);
-  width: 70%;
-  font-size: 22px;
-  line-height: 120%;
-  margin: 0 auto;
-  top: 50px;
-  padding: 25px;
-  position: relative; }
-
-.fa {
-  padding: 0 5px; }
-
-video {
-  z-index: -100;
-  position: fixed;
-  opacity: 0.7; }
-
-@media only screen and (max-width: 400px) {
-  .fadeContainer {
-    width: 90%; }
-
-  span {
-    display: none; }
-
-  i.fa {
-    font-size: 1.5em; }
-
-  .nav a {
-    padding-top: 5px; } }
-
-/*# sourceMappingURL=app.css.map */
+Backtrace:
+partials/_game.scss:82
+app.scss:3
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Users/leighbryant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...xt-shadow: none\": expected \"{\", was \";\"\A         on line 82 of partials/_game.scss\A         from line 3 of app.scss\A \A 77:   border-radius: 2px;\A 78:   color: #8164BA;\A 79:   padding: 6px 15px 0 15px;\A 80:   outline: none;\A 81: <<<<<<< HEAD\A 82:   text-shadow: none;\A 83: \A 84:   &:active {\A 85:     padding-left: 50px;\A 86:     padding-right: 50px;\A 87: ======="; }

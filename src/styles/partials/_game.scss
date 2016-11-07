@@ -76,13 +76,19 @@ line-height: 145%;
   border-bottom: 2px solid #40325d;
   border-radius: 2px;
   color: #8164BA;
-  padding: 6px 4px 0 4px;
+  padding: 6px 15px 0 15px;
   outline: none;
+<<<<<<< HEAD
   text-shadow: none;
 
   &:active {
     padding-left: 50px;
     padding-right: 50px;
+=======
+  &:focus {
+    padding-left: 40px;
+    padding-right: 40px;
+>>>>>>> b6d422187d3989e9e88b13096dec634e13affd2c
   }
 
 }
