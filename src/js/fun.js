@@ -15,12 +15,9 @@ $("body").on('click', '.heart', function () {
 
 $('body').on('click', '.inputs', function() {
   $(this).text('');
-<<<<<<< HEAD
   $(this).toggleClass('active');
-=======
   $(this).toggleClass('focus');
-  
->>>>>>> b6d422187d3989e9e88b13096dec634e13affd2c
+
 });
 
 

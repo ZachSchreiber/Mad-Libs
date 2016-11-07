@@ -1,11 +1,11 @@
-var app = angular.module('spielapp')
+var app = angular.module('spielapp');
 app.controller('MainController', function($scope, $sce, $http) {
 
 
   	$scope.isActive = false;
     $scope.activeForm = function() {
       $scope.isActive = !$scope.isActive;
-      
+
     };
 
 
@@ -19,7 +19,7 @@ $scope.getSpiels = function(){
 
 
 });
-}
+};
 
     $scope.body = null;
     $scope.completedSpiel = null;
@@ -64,7 +64,7 @@ $scope.libMaker= function(response) {
        }
      }
       $scope.body = this.splitUp.join('');
-   }
+   };
 
         $scope.getHtml = function(html){
         return $sce.trustAsHtml(html);
