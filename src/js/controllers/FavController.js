@@ -23,6 +23,4 @@ app.controller('FavController', function($scope, favorites, $q) {
        $scope.allFavs = response.data;
      });
 
-
-
     });
