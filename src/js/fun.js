@@ -35,19 +35,7 @@ $('body').on('click', '#textChange', function () {
 });
 
 
-function signUpValues() {
-    var newContext = {
-        username: $('#username').val(),
-        password: $('#password').val(),
-        confirm: $('#confirm').val()
-    };
-    if (newContext.password === newContext.confirm) {
-        checkUsername(newContext);
-    } else {
-        alert("Passwords do not match");
-    }
 
-}
 
 function removecarrots(form) {
   var newform = ''

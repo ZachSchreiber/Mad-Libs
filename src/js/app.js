@@ -9,7 +9,7 @@
     abstract: true,
     template: '<ui-view></ui-view>'
   }).state('main.login', {
-    url: '',
+    url: 'main.login',
     templateUrl: './src/templates/login.html',
     controller: 'LoginController as LoginCtrl'
   }).state('main.game', {
